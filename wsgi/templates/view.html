@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content">
+    <div class="header">
+	<img class="title" src='static/vp-banner.png' />
+    </div>
+    
+    
+    <div class="deathtable">
+{% for r in result %}
+    <div class="divresult">
+       &nbsp;{{r.name}}
+       {{r.message}}
+       {{r.service}}
+       <div class="divrestitle">
+       <p>{{r.timestamp|frmdate}}</p><br>
+      </div>
+     </div><br>
+{% endfor %}
+     
+    </div>
+
+{% endblock %}

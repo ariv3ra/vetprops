@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+      <div class="content">
+	<div class="header">
+		<img class="title" src='static/vp-banner.png' />
+	</div>
+	<div class="search">          
+	<form id="frmprop" action="/insert" method="POST">
+	<label>Leave a message for or Veterans. Don't for get to tell us who you are.</label>
+	<br><br>
+        <label>Your Name:&nbsp;</label><input name="poster" type="text" class="poster" maxlength="25">  
+        <br>
+	<br>
+	<select class="state" name="service">
+          <option value="air force">Air Force</option>
+          <option value="army">Army</option>
+          <option value="coast guard">Coast Guard</option>
+          <option value="navy">Navy</option>
+          <option value="marines">Marines</option>
+	</select>
+	<br><br>
+        <label>Enter your Prop&nbsp;</label><br><br>
+        <textarea name="message" maxlength="200" cols="35" rows="5" class="prop"></textarea>
+	<br><br>
+                
+	<input type="submit" value="Post Your Prop" class="button">
+		
+	</form>
+	</div>
+      </div>
+{% endblock %}
